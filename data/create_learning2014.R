@@ -40,5 +40,15 @@ learning2014 <- select(lrn14, one_of(keep_columns))
 # select rows where points is greater than zero
 learning2014 <- filter(learning2014, Points > 0)
 
-# see the stucture of the new dataset
 str(learning2014)
+#At this point there are 166 observations and 7 variables
+
+#Saving the dataset to "data" folder
+write.csv(learning2014, file = "learning2014.csv")
+
+#Reading the data
+MyData <- read.csv(file = "C:/Users/krist/Documents/GitHub/IODS-project/data/learning2014.csv")
+
+#Checking the structure of data
+str(MyData)
+head(MyData)
